@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>text color chooser</title>
+</head>
+<body>
+    <h1 style="color: red;">WARNING THIS IS A BAD WEBSITE!</h1>
+    <br>
+    <br>
+    <br>
+    <p>baground color:</p>
+   <input type="text" placeholder="r" id="r" >
+   <input type="text" placeholder="g" id="g" >
+   <input type="text" placeholder="b" id="b" >
+   <button onclick="check()">Submit</button>
+   <p id="output"></p>
+    <script>
+        var red = document.getElementById("r");
+        var green = document.getElementById("g");
+        var blue = document.getElementById("b");
+        var out = document.getElementById("output")
+
+        function check() {
+            var rgb = parseFloat(red.value)+parseFloat(green.value)+parseFloat(blue.value);
+            if (rgb/3 < 255/2){
+                out.innerHTML = "use white text";
+            }
+            else {
+                out.innerHTML = "use black text";
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>
